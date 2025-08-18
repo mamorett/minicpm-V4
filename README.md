@@ -102,6 +102,7 @@ python minicpmv4.py ./sequence --prompt "Spot visual changes" --sliding --save
 | `--sliding` | Compare each image with the next | 
 | `--save` | Save output as `.txt` (next to the image(s)) | 
 | `--force` | Overwrite `.txt` if it already exists | 
+| `--int4` | Use pre-quantized int4 model | 
 
 ---
 
