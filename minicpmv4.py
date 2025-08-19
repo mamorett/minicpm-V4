@@ -140,7 +140,7 @@ def main():
             out_base = os.path.join(dir1, f"{name1}_{name2}")
 
             if args.save and os.path.exists(f"{out_base}.txt") and not args.force:
-                tqdm.write(f"Skipping {out_base} (already exists)")
+                tqdm.write(f"⏩Skipping {out_base} (already exists)")
                 continue
 
             answer = generate_response(model, tokenizer, [img1, img2], args.prompt)
@@ -149,7 +149,7 @@ def main():
             print(f"{answer}\n")
 
             if save_output_if_needed(out_base, answer, args.save, args.force):
-                tqdm.write(f"Saved: {out_base}.txt")
+                tqdm.write(f"💾 Saved: {out_base}.txt")
             processed_items.append(out_base)
 
     # Sliding mode
@@ -164,7 +164,7 @@ def main():
             out_base = os.path.join(dir1, f"{name1}_{name2}")
 
             if args.save and os.path.exists(f"{out_base}.txt") and not args.force:
-                tqdm.write(f"Skipping {out_base} (already exists)")
+                tqdm.write(f"⏩Skipping {out_base} (already exists)")
                 continue
 
             answer = generate_response(model, tokenizer, [img1, img2], args.prompt)
@@ -173,7 +173,7 @@ def main():
             print(f"{answer}\n")
 
             if save_output_if_needed(out_base, answer, args.save, args.force):
-                tqdm.write(f"Saved: {out_base}.txt")
+                tqdm.write(f"💾 Saved: {out_base}.txt")
             processed_items.append(out_base)
 
     # Single mode
@@ -182,7 +182,7 @@ def main():
             out_base = os.path.splitext(fpath)[0]
 
             if args.save and os.path.exists(f"{out_base}.txt") and not args.force:
-                tqdm.write(f"Skipping {out_base} (already exists)")
+                tqdm.write(f"⏩Skipping {out_base} (already exists)")
                 continue
 
             answer = generate_response(model, tokenizer, [img], args.prompt)
@@ -191,7 +191,7 @@ def main():
             print(f"{answer}\n")
 
             if save_output_if_needed(out_base, answer, args.save, args.force):
-                tqdm.write(f"Saved: {out_base}.txt")
+                tqdm.write(f"💾 Saved: {out_base}.txt")
             processed_items.append(out_base)
 
     if len(processed_items) > 1:
