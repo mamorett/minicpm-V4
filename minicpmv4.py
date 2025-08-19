@@ -195,6 +195,10 @@ def main():
             processed_items.append(out_base)
 
     if len(processed_items) > 1:
+        print("\n📊 Batch Report")
+        print(f"Processed: {len(processed_items)} / {len(all_images)}")
+        for name in processed_items:
+            print(f" - {name}")
         save_batch_report(processed_items)
 
 
